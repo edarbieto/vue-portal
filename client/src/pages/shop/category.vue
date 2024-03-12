@@ -4,28 +4,7 @@
       <h1>shop-category</h1>
       <div class="mr-6">
 
-        <!-- <v-btn color="gray" class="border rounded-pill my-2 text-subtitle-1">
-          <span>Sort: {{ selected }}</span>
-          <v-menu>
-            <template v-slot:activator="{ props }">
-              <v-icon >mdi-menu-down</v-icon>
-            </template>
-            <v-list v-bind="props">
-              <v-list-item  v-model="selected">
-                <v-list-item-title>Best Match</v-list-item-title>
-              </v-list-item>
-              <v-list-item v-model="selected">
-                <v-list-item-title>Low Price</v-list-item-title>
-              </v-list-item>
-              <v-list-item v-model="selected">
-                <v-list-item-title>High Price</v-list-item-title>
-              </v-list-item>
-            </v-list>
-          </v-menu>
-        </v-btn> -->
-
-
-        <v-menu internal-activator>
+        <v-menu>
           <template v-slot:activator="{ props }">
             <v-btn color="gray" class="border rounded-pill my-2 text-subtitle-1" v-bind="props" v-model="selected">
               <span>Sort: {{ selected }}</span>
@@ -34,7 +13,7 @@
           </template>
           <v-list density="compact">
             <v-list-item v-model="selected" @click="updateSelected('Best match')" value="Best match">
-              <v-list-item-title >Best Match
+              <v-list-item-title >Best match
               </v-list-item-title>
             </v-list-item>
 
@@ -298,13 +277,5 @@ function filterCards() {
 const updateSelected = (value) => {
   selected.value = value;
 };
-// function sortedCards(val){
-//   if (val=='1'){
-//     sorted.value='Best Match'
-//   }else if (val=='2'){
-//     sorted.value='Low Price'
-//   }else{
-//     sorted.value='High Price'
-//   }
-// }
+
 </script>
