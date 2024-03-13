@@ -1,6 +1,6 @@
 <template>
   <v-sheet class="pa-12" rounded>
-    <v-card class="mx-auto px-5 py-8" max-width="350">
+    <v-card class="mx-auto px-5 py-8" max-width="340">
       <v-form>
         <div class="cont-title">
           <p class="text-h4">OEC COMPUTERS</p>
@@ -20,21 +20,33 @@
           placeholder="Password"
         ></v-text-field>
 
-        <div class="remember-password">
-          <v-checkbox class="login-check-box" label="Remember me"></v-checkbox>
-          <v-btn variant="plain" class="text-subtitle-2">Forgot Password?</v-btn>
+        <div class="mb-3 d-flex justify-space-between">
+          <div class="d-flex ">
+            <v-checkbox density="compact" size="small">
+              <template v-slot:label>
+                <p class="text-subtitle-2">Remember me</p>
+              </template>
+            </v-checkbox>            
+          </div>
+
+          <div>
+            <v-btn variant="text" class="text-subtitle-2" color="primary">Forgot Password?</v-btn>
+          </div>
+          
+          
         </div>        
 
         <v-btn
+          class="text-none"
           color="primary"
           size="large"
           type="submit"
           block
         >
-          Sign In
+          Sign in
         </v-btn>
 
-        <p class="mb-1 text-body-2">
+        <p class="mt-3 text-body-2">
           Don't have an account?
           <router-link
             to="/register"
@@ -61,6 +73,6 @@
   text-align: center;
 }
 .login-check-box{
-  font-size: 12px;  
+  font-size: 12px;    
 }
 </style>
