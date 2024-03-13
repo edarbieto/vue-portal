@@ -2,12 +2,10 @@
   <v-sheet class="pa-12" rounded>
     <v-card class="mx-auto px-5 py-8" max-width="340">
       <v-form>
-        <div class="cont-title">
-          <p class="text-h4">OEC COMPUTERS</p>
-        </div>
-        <div class="text-slogan pa-5">
-          <p class="text-h6">One account</p>
-          <p class="text-h6">Many possibilities</p>
+        <p class="text-h4 text-center font-weight-bold">OEC COMPUTERS</p>  
+
+        <div class="text-h6 text-center mb-8">          
+          <p>Many possibilities</p>
         </div>    
 
         <v-text-field 
@@ -30,27 +28,30 @@
           </div>
 
           <div>
-            <v-btn variant="text" class="text-subtitle-2" color="primary">Forgot Password?</v-btn>
-          </div>
-          
-          
+            <v-btn variant="text" class="text-subtitle-2" color="primary">
+              <router-link
+                to="/auth/forgot-password?"
+                class="text-decoration-none font-weight-bold"
+              >
+              Forgot Password?
+              </router-link>
+            </v-btn>
+          </div>       
         </div>        
 
         <v-btn
-          class="text-none"
+          class="text-none mb-3"
           color="primary"
-          size="large"
-          type="submit"
           block
         >
           Sign in
         </v-btn>
 
-        <p class="mt-3 text-body-2">
+        <p class="mb-1 text-caption">
           Don't have an account?
           <router-link
-            to="/register"
-            class="text-subtitle-2"
+            to="/auth/register"
+            class="font-weight-bold"
           >
             Register
           </router-link>
@@ -61,18 +62,9 @@
 </template>
 
 <style scoped>
-.remember-password{
+.center-vertically {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-.cont-title{
-  text-align: center;
-}
-.text-slogan{
-  text-align: center;
-}
-.login-check-box{
-  font-size: 12px;    
 }
 </style>
